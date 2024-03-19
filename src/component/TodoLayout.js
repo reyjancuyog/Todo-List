@@ -1,4 +1,4 @@
-import { Button, Input, Layout } from "antd";
+import { Button, Card, Input, Layout } from "antd";
 import React from "react";
 import { useState } from "react";
 import TodoListTable from "./TodoListTable";
@@ -14,8 +14,8 @@ function TodoLayout() {
     setUserInput(event.target.value);
   };
   return (
-    <Layout className=" min-h-screen bg-slate-500">
-      <h1>Todo Task</h1>
+    <Layout className=" min-h-screen bg-gradient-to-b from-blue-950 to-green-500 overflow-hidden">
+      <h1 className=" text-zinc-400 text-2xl ml-2">Todo Task</h1>
       <div className=" flex-col">
         <div className="flex justify-center gap-1">
           <Input
@@ -27,12 +27,14 @@ function TodoLayout() {
             Add Task
           </Button>
         </div>
-        <div className=" mt-2">
-          <ul>
-            {todList.map((NewTask) => {
-              return <TodoListTable NewTask={NewTask} />;
-            })}
-          </ul>
+        <div className=" mt-2 flex justify-center">
+          <Card style={{ width: 200 }}>
+            <ul>
+              {todList.map((NewTask) => {
+                return <TodoListTable NewTask={NewTask} />;
+              })}
+            </ul>
+          </Card>
         </div>
       </div>
     </Layout>
