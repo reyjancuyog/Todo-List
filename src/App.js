@@ -1,12 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import TodoLayout from "./component/TodoLayout";
-
+import { ConfigProvider } from "antd";
+import Theme from "../src/Theme/theme.json";
 function App() {
   return (
-    <div>
-      <TodoLayout />
-    </div>
+    <>
+      <ConfigProvider theme={Theme}>
+        <TodoLayout />
+      </ConfigProvider>
+    </>
   );
 }
 
