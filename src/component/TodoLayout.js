@@ -47,7 +47,7 @@ function TodoLayout() {
             className=" shadow-sm"
             size="small"
             onClick={addTodos}
-            style={{ backgroundColor: colorPrimaryBg }}
+            style={{ backgroundColor: colorPrimaryBg, color: "black" }}
           >
             Add Task
           </Button>
