@@ -26,14 +26,15 @@ function TodoLayout() {
 
   return (
     <Layout className=" min-h-screen bg-blue-200">
-      <Header className=" bg-blue-400 h-12 m-0 shadow-md">
+      <div className=" w-full h-12 bg-blue-400  m-0 shadow-md flex flex-row gap-1">
+        <img src="date.svg" width={40} className=" ml-1" />
         <h1
-          className=" text-blue-900 font text-2xl tracking-wider font-mono"
+          className=" text-blue-900 font text-2xl tracking-wider font-mono mt-2"
           style={{ fontWeight: 900, height: 800 }}
         >
           Todo/Task
         </h1>
-      </Header>
+      </div>
       <div className=" flex-col">
         <div className="flex justify-center mt-2 gap-2">
           <Input
